@@ -6,10 +6,20 @@
   --light-blue: #4169e1;
 }
 
+/* * {
+  border: 1px solid red;
+} */
+
+.section-content {
+  border: 1px solid red;
+}
+
 body {
-  background-color: var(--blue-grey);
-  color: var(--light-grey);
+  background-color: var(--light-grey);
+  color: var(--dark-blue);
   font-size: 16px;
+  max-width: 2000px;
+  margin: 0 auto;
 }
 
 header {
@@ -70,6 +80,90 @@ header h1::after {
   color: var(--light-grey);
   position:absolute;
   margin: 3em 0 0 -12em;
+}
+main {
+  padding-top: 20px;
+}
+
+.content {
+  display: flex;
+}
+
+.section-header {
+  flex: 0 2 10rem;
+  text-align: right;
+  padding: 4rem 1rem;
+  border-right: 1px solid var(--light-grey);
+}
+
+.section-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#profile-pic img {
+  width: 200px;
+}
+
+/* .project-card {
+  flex: 0 1 200px;
+} */
+
+#first-project {
+  /* flex: 0 1; */
+  background-image: url("../images/horiseon-project.png");
+  height: 50vh;
+  width: 100%;
+  background-position: center top;
+}
+
+#row-1 {
+  border: 1px solid red;
+  margin-bottom: 10px;
+}
+
+#second-project {
+  background-image: url("../images/css-snippet-cheatsheet-project.png");
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 5px 0 0;
+}
+
+#third-project {
+  background-image: url("../images/prework-project.png");
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 0 5px 0;
+}
+
+#row-2 {
+  display: flex;
+  height: 40vh;
+  border: 1px solid red;
+}
+
+.git-page-link {
+  position: relative;
+}
+
+/* .git-page-link img {
+  width: 200px;
+  height: auto;
+} */
+
+@media  screen and (max-width: 1100px) {
+  #row-2 {
+    flex-wrap: wrap;
+  }
+
+  #second-project,
+  #third-project {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 992px) {
